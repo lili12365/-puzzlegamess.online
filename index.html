@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PuzzleGames.space | Find Free Online Puzzle Games Faster</title>
+  <meta
+    name="description"
+    content="PuzzleGames.space helps players find free online puzzle games faster with category browsing, quick summaries, dedicated game pages, and browser-friendly play paths."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#f4efe7" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PuzzleGames.space" />
+  <meta property="og:title" content="PuzzleGames.space | Find Free Online Puzzle Games Faster" />
+  <meta
+    property="og:description"
+    content="Find browser puzzle games faster, compare categories, and open dedicated game pages that explain what to play next and why."
+  />
+  <meta property="og:url" content="https://puzzlegames.space/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PuzzleGames.space | Find Free Online Puzzle Games Faster" />
+  <meta
+    name="twitter:description"
+    content="Find browser puzzle games faster with category browsing, quick summaries, and dedicated game pages on PuzzleGames.space."
+  />
+  <link rel="canonical" href="https://puzzlegames.space/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind-config.js"></script>
+  <script src="./games-data.js"></script>
+  <script src="./home-featured.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "PuzzleGames.space",
+      "url": "https://puzzlegames.space/",
+      "description": "PuzzleGames.space helps players discover browser puzzle games faster through categories, summaries, and dedicated game pages.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "PuzzleGames.space",
+        "url": "https://puzzlegames.space/"
+      }
+    }
+  </script>
+</head>
+<body class="bg-shell text-ink antialiased page-home">
+  <div class="site-shell">
+    <header class="site-header sticky top-0 z-30 border-b border-line/70 bg-white/80 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 lg:px-8">
+        <a href="./index.html" class="brand-link flex items-center gap-3 text-sm font-extrabold uppercase tracking-[0.24em] text-ink">
+          <span class="brand-mark inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white shadow-apple">PG</span>
+          <span class="brand-wordmark">PuzzleGames.space</span>
+        </a>
+        <nav aria-label="Primary" class="nav-pillbar hidden items-center gap-2 text-sm font-semibold text-muted md:flex">
+          <a class="transition hover:text-ink" href="./games.html">Games</a>
+          <a class="transition hover:text-ink" href="#categories">Categories</a>
+          <a class="transition hover:text-ink" href="#why-us">Why this site</a>
+          <a class="transition hover:text-ink" href="./about.html">About</a>
+          <a class="transition hover:text-ink" href="./contact.html">Contact</a>
+          <a class="transition hover:text-ink" href="./privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="home-hero mx-auto grid max-w-7xl gap-10 px-5 pb-10 pt-10 lg:grid-cols-[1.14fr_0.86fr] lg:px-8 lg:pb-16 lg:pt-16">
+        <div class="hero-copy space-y-7">
+          <p class="eyebrow">Puzzle game discovery for browser players</p>
+          <h1 class="max-w-4xl font-display text-4xl font-semibold leading-tight text-ink md:text-5xl lg:text-6xl">
+            Find the right online puzzle game faster.
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-muted md:text-xl">
+            PuzzleGames.space is built for players who want short, browser-based puzzle games without wasting time in cluttered directories. The site helps users browse by category, compare game styles, open dedicated game pages, and decide what fits their time, device, and mood before they start playing.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="pill">Find games by category</span>
+            <span class="pill">Compare before you play</span>
+            <span class="pill">Short browser sessions</span>
+            <span class="pill">Desktop and mobile friendly</span>
+            <span class="pill">Discover related titles</span>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a
+              href="./games.html"
+              class="cta-primary inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-bold text-white transition hover:bg-accent"
+            >
+              Browse all games
+            </a>
+            <a
+              href="./games/trap-the-cat.html"
+              class="cta-secondary inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3 text-sm font-bold text-ink transition hover:border-accent hover:text-accent"
+            >
+              See a sample game page
+            </a>
+          </div>
+          <div class="hero-stat-grid grid gap-4 sm:grid-cols-3">
+            <article class="metric-tile section-card">
+              <p class="text-3xl font-extrabold text-ink">32</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Game pages built to help visitors understand a title before they click into play.</p>
+            </article>
+            <article class="metric-tile section-card">
+              <p class="text-3xl font-extrabold text-ink">4</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Core categories that make it easier to narrow down the right play style quickly.</p>
+            </article>
+            <article class="metric-tile section-card">
+              <p class="text-3xl font-extrabold text-ink">Clear</p>
+              <p class="mt-2 text-sm leading-6 text-muted">Clear source paths so users can either stay on-site or open the original publisher view.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-showcase">
+          <div class="showcase-stack">
+            <article class="showcase-panel showcase-panel-primary">
+              <div class="showcase-head">
+                <p class="eyebrow">Example user path</p>
+                <span class="showcase-chip">Logic favorite</span>
+              </div>
+              <h2>Trap the Cat</h2>
+              <p>A good example of how the site helps a user move from browsing to understanding to playing without extra friction.</p>
+              <div class="showcase-rail">
+                <span>2-6 min</span>
+                <span>Desktop + mobile</span>
+                <span>Replay-friendly</span>
+              </div>
+              <div class="showcase-grid">
+                <div>
+                  <strong>Choose</strong>
+                  <span>quick fit</span>
+                </div>
+                <div>
+                  <strong>Learn</strong>
+                  <span>how it plays</span>
+                </div>
+                <div>
+                  <strong>Continue</strong>
+                  <span>related titles</span>
+                </div>
+              </div>
+            </article>
+            <div class="showcase-row">
+              <article class="showcase-panel showcase-panel-soft">
+                <p class="eyebrow">What users get</p>
+                <ul class="showcase-list">
+                  <li>Faster game discovery</li>
+                  <li>Cleaner game comparison</li>
+                  <li>Short decision-friendly summaries</li>
+                  <li>Direct paths into play</li>
+                </ul>
+              </article>
+              <article class="showcase-panel showcase-panel-dark">
+                <p class="eyebrow">Site purpose</p>
+                <h2>Help players spend less time searching and more time playing</h2>
+                <p>Visitors can enter through the homepage, browse by category, and land on pages that explain what the game is, who it suits, and what to try next.</p>
+                <a href="./games.html" class="showcase-link">Open the game library</a>
+              </article>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 py-6 lg:px-8 lg:py-10">
+        <div class="mb-8 max-w-4xl">
+          <p class="eyebrow">Featured picks</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">Start with pages that are easy to understand and quick to try</h2>
+          <p class="mt-4 text-lg leading-8 text-muted">
+            These featured entries show how the site works for users: browse a recognizable title, read a short summary, decide whether it fits, and move directly into play or into more related games.
+          </p>
+        </div>
+        <div id="home-featured-grid" class="catalog-grid catalog-grid--featured"></div>
+      </section>
+
+      <section id="why-us" class="mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="section-card">
+            <p class="eyebrow">Who it helps</p>
+            <h2 class="mt-3 text-2xl font-extrabold text-ink">Built for players who want quick, low-friction puzzle browsing</h2>
+            <p class="mt-4 text-base leading-7 text-muted">
+              The site serves users who want to find a playable puzzle game during a short break, compare several game styles quickly, or jump into a familiar category without opening multiple messy directories.
+            </p>
+          </article>
+          <article class="section-card">
+            <p class="eyebrow">What it solves</p>
+            <h2 class="mt-3 text-2xl font-extrabold text-ink">It reduces the time spent guessing which game to click</h2>
+            <p class="mt-4 text-base leading-7 text-muted">
+              Instead of opening random games one by one, visitors can use categories, tags, summaries, and per-game pages to understand what a title offers before they commit to playing it.
+            </p>
+          </article>
+          <article class="section-card">
+            <p class="eyebrow">What users can do</p>
+            <h2 class="mt-3 text-2xl font-extrabold text-ink">Browse, compare, choose, and keep discovering similar games</h2>
+            <p class="mt-4 text-base leading-7 text-muted">
+              The site is designed to help players move from one suitable game to the next through related recommendations, category pages, and direct source access when they want the original publisher view.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="categories" class="mx-auto max-w-7xl px-5 py-4 lg:px-8 lg:py-6">
+        <div class="mb-8 max-w-4xl">
+          <p class="eyebrow">Core categories</p>
+          <h2 class="mt-3 font-display text-3xl font-semibold text-ink md:text-4xl">Browse by the type of puzzle experience you want</h2>
+          <p class="mt-4 text-lg leading-8 text-muted">
+            Categories help users reach the right kind of game faster, whether they want quiet logic puzzles, familiar merge loops, block classics, or quicker arcade-style brain games.
+          </p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <a class="section-card category-link-card" href="./categories/logic-drawing-games.html">
+            <h2 class="text-2xl font-extrabold text-ink">Logic &amp; Drawing</h2>
+            <p class="mt-3 text-base leading-7 text-muted">Path planning, line drawing, and board-reading games where patient decisions usually outperform fast guesses.</p>
+          </a>
+          <a class="section-card category-link-card" href="./categories/2048-merge-games.html">
+            <h2 class="text-2xl font-extrabold text-ink">2048 &amp; Merge</h2>
+            <p class="mt-3 text-base leading-7 text-muted">Number progression, merge loops, and board management games that reward structure and space control.</p>
+          </a>
+          <a class="section-card category-link-card" href="./categories/blocks-bricks-games.html">
+            <h2 class="text-2xl font-extrabold text-ink">Blocks &amp; Bricks</h2>
+            <p class="mt-3 text-base leading-7 text-muted">Shape placement, line clearing, brick breaking, and compact board games that stay readable across devices.</p>
+          </a>
+          <a class="section-card category-link-card" href="./categories/arcade-brain-games.html">
+            <h2 class="text-2xl font-extrabold text-ink">Arcade Brain Games</h2>
+            <p class="mt-3 text-base leading-7 text-muted">Short-session games that combine timing pressure with enough structure to still feel puzzle-adjacent.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-16 pt-10 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <article class="section-card">
+            <p class="eyebrow">How to use the site</p>
+            <ul class="mt-5 space-y-3 text-sm leading-7 text-muted">
+              <li class="list-check">Start from the library if you want to compare categories, tags, and session styles.</li>
+              <li class="list-check">Open a game page when you want a quick summary, fit check, and play guidance first.</li>
+              <li class="list-check">Use the source button when you prefer the original publisher host or native playback path.</li>
+              <li class="list-check">Use related links to keep discovering titles that match the same play style.</li>
+            </ul>
+          </article>
+          <article class="section-card prose-copy">
+            <p class="eyebrow">Why this helps</p>
+            <h2 class="mt-3 text-2xl font-extrabold text-ink">This site is designed to help users decide faster</h2>
+            <p>
+              PuzzleGames.space is structured around a simple user need: finding a puzzle game that feels right without opening ten unrelated pages first. That is why the site emphasizes browsing context, category clarity, and per-game explanations.
+            </p>
+            <p>
+              The result is a library that works as both a playable destination and a decision tool. Users can scan quickly, compare options, and move into play with more confidence and less wasted time.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer border-t border-line/70 bg-white/90">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-10 lg:grid-cols-[1fr_auto] lg:px-8">
+        <div>
+          <p class="text-lg font-extrabold text-ink">PuzzleGames.space</p>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-muted">
+            A browser puzzle game discovery site that helps players compare titles faster through categories, summaries, and dedicated game pages.
+          </p>
+        </div>
+        <nav aria-label="Footer" class="flex flex-col gap-3 text-sm font-semibold text-muted">
+          <a class="footer-link" href="./games.html">Games</a>
+          <a class="footer-link" href="./about.html">About</a>
+          <a class="footer-link" href="./terms.html">Terms</a>
+          <a class="footer-link" href="./dmca.html">DMCA</a>
+          <a class="footer-link" href="./privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Riddle Sprint</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind-config.js"></script>
+</head>
+<body class="game-body">
+  <div class="game-wrap">
+    <section class="game-card">
+      <p class="eyebrow">Sample embedded game</p>
+      <div class="game-toolbar">
+        <div>
+          <h1 class="text-2xl font-extrabold text-ink">Daily Riddle Sprint</h1>
+          <p class="mt-2 text-sm leading-7 text-muted">A simple local demo you can replace later with your own iframe source or a third-party puzzle URL.</p>
+        </div>
+        <div class="game-chip" id="score-chip">Score: 0 / 3</div>
+      </div>
+
+      <div class="game-progress">
+        <div class="game-progress-bar" aria-hidden="true">
+          <div class="game-progress-fill" id="progress-fill" style="width: 33%;"></div>
+        </div>
+        <p class="text-sm font-semibold text-muted" id="progress-label">Riddle 1 of 3</p>
+      </div>
+
+      <p class="game-question" id="question"></p>
+      <label class="sr-only" for="answer-input">Type your answer</label>
+      <input id="answer-input" class="game-input" type="text" autocomplete="off" placeholder="Type your answer here" />
+
+      <div class="game-actions">
+        <button class="game-button" id="check-button" type="button">Check answer</button>
+        <button class="game-button-secondary" id="hint-button" type="button">Show hint</button>
+        <button class="game-button-secondary" id="reveal-button" type="button">Reveal answer</button>
+        <button class="game-button-secondary" id="next-button" type="button">Next riddle</button>
+      </div>
+
+      <div class="game-status" id="status-box">
+        Enter your guess and press <strong>Check answer</strong>. If you are preparing this site for launch, replace this demo with your actual puzzle embed later.
+      </div>
+
+      <div class="game-meta">
+        <article class="game-tip">
+          <h2>How to play</h2>
+          <p>Read the clue, type a short answer, and use hints only when you need them. The goal is to solve all three riddles with as few reveals as possible.</p>
+        </article>
+        <article class="game-tip helper-links">
+          <h2>Ready to expand the site?</h2>
+          <p>Use this same iframe area on <a href="./index.html" target="_top">the homepage</a>, then clone it into individual landing pages for more puzzle categories and game links.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const riddles = [
+      {
+        question: "I get wetter every time I dry. What am I?",
+        hint: "You probably keep me in a bathroom or kitchen.",
+        answers: ["towel", "a towel"],
+        reveal: "A towel."
+      },
+      {
+        question: "The more you take, the more you leave behind. What are they?",
+        hint: "Think about movement on the ground.",
+        answers: ["footsteps", "steps", "your footsteps"],
+        reveal: "Footsteps."
+      },
+      {
+        question: "I have keys but no locks. I have space but no rooms. You can enter, but you cannot go outside. What am I?",
+        hint: "You use it to type.",
+        answers: ["keyboard", "a keyboard"],
+        reveal: "A keyboard."
+      }
+    ];
+
+    const questionEl = document.getElementById("question");
+    const inputEl = document.getElementById("answer-input");
+    const statusEl = document.getElementById("status-box");
+    const scoreEl = document.getElementById("score-chip");
+    const progressFill = document.getElementById("progress-fill");
+    const progressLabel = document.getElementById("progress-label");
+    const nextButton = document.getElementById("next-button");
+
+    let index = 0;
+    let score = 0;
+    let solved = false;
+
+    function normalize(value) {
+      return value.trim().toLowerCase();
+    }
+
+    function render() {
+      const current = riddles[index];
+      questionEl.textContent = current.question;
+      inputEl.value = "";
+      inputEl.focus();
+      solved = false;
+      progressFill.style.width = `${((index + 1) / riddles.length) * 100}%`;
+      progressLabel.textContent = `Riddle ${index + 1} of ${riddles.length}`;
+      scoreEl.textContent = `Score: ${score} / ${riddles.length}`;
+      nextButton.disabled = false;
+      nextButton.style.opacity = "1";
+      nextButton.textContent = index === riddles.length - 1 ? "Finish" : "Next riddle";
+      statusEl.innerHTML = 'Enter your guess and press <strong>Check answer</strong>.';
+    }
+
+    function checkAnswer() {
+      if (solved) {
+        statusEl.innerHTML = "You already solved this one. Move to the next riddle when you are ready.";
+        return;
+      }
+
+      const guess = normalize(inputEl.value);
+      if (!guess) {
+        statusEl.innerHTML = "Type an answer first so the game can check your guess.";
+        return;
+      }
+
+      const current = riddles[index];
+      if (current.answers.includes(guess)) {
+        score += 1;
+        solved = true;
+        scoreEl.textContent = `Score: ${score} / ${riddles.length}`;
+        statusEl.innerHTML = "<strong>Correct.</strong> Nice solve. Use Next riddle to continue.";
+      } else {
+        statusEl.innerHTML = "<strong>Not quite.</strong> Try again or use the hint if you want a small clue.";
+      }
+    }
+
+    function showHint() {
+      statusEl.innerHTML = `<strong>Hint:</strong> ${riddles[index].hint}`;
+    }
+
+    function revealAnswer() {
+      solved = true;
+      statusEl.innerHTML = `<strong>Answer:</strong> ${riddles[index].reveal}`;
+    }
+
+    function nextRiddle() {
+      if (index < riddles.length - 1) {
+        index += 1;
+        render();
+      } else {
+        statusEl.innerHTML = `<strong>Finished.</strong> You reached the end with a score of ${score} out of ${riddles.length}.`;
+        nextButton.disabled = true;
+        nextButton.style.opacity = "0.55";
+      }
+    }
+
+    document.getElementById("check-button").addEventListener("click", checkAnswer);
+    document.getElementById("hint-button").addEventListener("click", showHint);
+    document.getElementById("reveal-button").addEventListener("click", revealAnswer);
+    document.getElementById("next-button").addEventListener("click", nextRiddle);
+    inputEl.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
