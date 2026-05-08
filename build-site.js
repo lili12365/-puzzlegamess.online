@@ -8,6 +8,8 @@ const SITE_URL = "https://puzzlegames.space";
 const LASTMOD = "2026-05-01";
 const THUMB_WIDTH = 1200;
 const THUMB_HEIGHT = 675;
+const ADSENSE_HEAD_SCRIPT =
+  '  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-337627485410551" crossorigin="anonymous"></script>';
 const PAGE_HEADERS = {
   "user-agent":
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
@@ -834,6 +836,7 @@ function categoryPageMarkup(category, games) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../styles.css" />
+${ADSENSE_HEAD_SCRIPT}
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../tailwind-config.js"></script>
   <script type="application/ld+json">${JSON.stringify(ldJson)}</script>
@@ -1244,6 +1247,7 @@ function gamePageMarkup(game, games) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="../styles.css" />
+${ADSENSE_HEAD_SCRIPT}
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../tailwind-config.js"></script>
   <script type="application/ld+json">${JSON.stringify(ldJson)}</script>
