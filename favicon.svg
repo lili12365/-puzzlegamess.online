@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Brush Jjaemu</title>
+  <defs>
+    <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cd6d5d" />
+      <stop offset="100%" stop-color="#c9a24f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#f6efe2" />
+  <path d="M19 45V18h16c7.5 0 12 4.1 12 10.4 0 4.8-2.3 8-6.9 9.6L48 45h-9.4l-7-6.3H27V45H19Zm8-13h7.2c3 0 4.8-1.5 4.8-4 0-2.6-1.8-4-4.8-4H27v8Z" fill="#23333a"/>
+  <path d="M44.8 15.5 50 20.7 37.2 33.5l-5.7.9.9-5.7 11.4-11.4Z" fill="url(#brushGradient)" />
+</svg>
