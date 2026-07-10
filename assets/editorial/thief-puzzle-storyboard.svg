@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Thief Puzzle storyboard</title>
+  <desc id="desc">Extend a sneaky hand around obstacles and grab the target item safely.</desc>
+  <defs>
+    <linearGradient id="storyBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf1" />
+      <stop offset="100%" stop-color="#e9efff" />
+    </linearGradient>
+    <clipPath id="frame1"><rect x="72" y="110" width="318" height="182" rx="26" /></clipPath>
+    <clipPath id="frame2"><rect x="441" y="110" width="318" height="182" rx="26" /></clipPath>
+    <clipPath id="frame3"><rect x="810" y="110" width="318" height="182" rx="26" /></clipPath>
+  </defs>
+
+  <rect width="1200" height="675" rx="44" fill="url(#storyBg)" />
+  <rect x="52" y="58" width="1096" height="559" rx="34" fill="rgba(255,255,255,0.72)" stroke="rgba(23,20,18,0.08)" />
+  <text x="72" y="86" fill="#2457d8" font-family="Sora, sans-serif" font-size="22" font-weight="800" letter-spacing="3">EDITORIAL STORYBOARD</text>
+
+  
+      <rect x="72" y="110" width="318" height="182" rx="26" fill="rgba(255,255,255,0.10)" />
+      <rect x="441" y="110" width="318" height="182" rx="26" fill="rgba(255,255,255,0.08)" />
+      <rect x="810" y="110" width="318" height="182" rx="26" fill="rgba(255,255,255,0.06)" />
+
+  
+        <rect x="72" y="318" width="318" height="228" rx="28" fill="#ffffff" stroke="rgba(23,20,18,0.08)" />
+        <text x="98" y="362" fill="#2457d8" font-family="Sora, sans-serif" font-size="18" font-weight="800">01</text>
+        <text x="98" y="408" fill="#171412" font-family="Sora, sans-serif" font-size="23" font-weight="700">
+          Opening read
+        </text>
+        <text x="98" y="450" fill="#665f57" font-family="Sora, sans-serif" font-size="20" font-weight="500">
+          <tspan x="98" dy="0">Trace the safe lane in your</tspan><tspan x="98" dy="30">head...</tspan>
+        </text>
+        <rect x="441" y="318" width="318" height="228" rx="28" fill="#ffffff" stroke="rgba(23,20,18,0.08)" />
+        <text x="467" y="362" fill="#2457d8" font-family="Sora, sans-serif" font-size="18" font-weight="800">02</text>
+        <text x="467" y="408" fill="#171412" font-family="Sora, sans-serif" font-size="23" font-weight="700">
+          Main pressure
+        </text>
+        <text x="467" y="450" fill="#665f57" font-family="Sora, sans-serif" font-size="20" font-weight="500">
+          <tspan x="467" dy="0">The levels are funny on the</tspan><tspan x="467" dy="30">surface,...</tspan>
+        </text>
+        <rect x="810" y="318" width="318" height="228" rx="28" fill="#ffffff" stroke="rgba(23,20,18,0.08)" />
+        <text x="836" y="362" fill="#2457d8" font-family="Sora, sans-serif" font-size="18" font-weight="800">03</text>
+        <text x="836" y="408" fill="#171412" font-family="Sora, sans-serif" font-size="23" font-weight="700">
+          Mistake to avoid
+        </text>
+        <text x="836" y="450" fill="#665f57" font-family="Sora, sans-serif" font-size="20" font-weight="500">
+          <tspan x="836" dy="0">Players usually fail by</tspan><tspan x="836" dy="30">aiming...</tspan>
+        </text>
+</svg>
